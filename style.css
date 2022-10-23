@@ -1,0 +1,438 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  margin:0;
+  padding:0
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  text-decoration: none
+}
+
+a:visited {
+  text-decoration: none
+}
+
+/* COLORS AND FONTS */
+
+:root {
+  --primary1:hsl(171, 66%, 44%);
+  --primary2:hsl(233, 100%, 69%);
+
+  --neutral1:hsl(210, 10%, 33%);
+  --neutral2: hsl(201, 11%, 66%);
+  --neutralfooter:hsl(201, 11%, 97%);
+
+  --ff-main:'Bai Jamjuree', sans-serif;
+}
+
+.bg-1 {
+  color:var(--primary1)
+}
+
+.bg-2 {
+  color:var(--primary2)
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+html {
+  font-size:18px
+}
+
+h1, h2, h3 {
+  color:var(--neutral1)
+}
+
+p {
+  color:var(--neutral2)
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size:1.5rem
+}
+
+h2 {
+  font-size:1.4rem
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  letter-spacing: 1px;
+  font-size: .9rem;
+}
+
+/* NORMAL CSS */
+
+body {
+  font-family: var(--ff-main);
+  display:grid;
+  place-items:center;
+}
+
+.container {
+  width:85vw;
+  margin-inline:auto;
+  margin-top:5em;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap:5em
+}
+
+.text {
+  display:flex;
+  flex-direction: column;
+  gap:.6em
+}
+
+header {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  width:30%;
+  margin-bottom:3em;
+  max-width: 100px;
+}
+
+header .text {
+  margin-bottom:2.5em;
+}
+
+.download-buttons {
+  display:flex;
+  flex-direction: column;
+  gap:1em;
+  width:100%;
+  justify-content: center;
+}
+
+.btn1 {
+  background-color: var(--primary1);
+  padding:.7em;
+  border-radius:100px;
+  color:white
+}
+
+.btn2 {
+  background-color: var(--primary2);
+  padding:.7em;
+  border-radius:100px;
+  color:white
+}
+
+.btn1:hover, .btn2:hover {
+  cursor: pointer;
+  opacity:0.8
+}
+
+main {
+  display:flex;
+  flex-direction: column;
+  gap:5em;
+}
+
+.section1 {
+  display:flex;
+  flex-direction: column;
+  gap:3em;
+  align-items: center;
+  
+}
+
+.section1 ul {
+  gap:3em;
+  display:flex;
+  flex-direction: column;
+}
+
+.computer-flex {
+  display:flex;
+  flex-direction: column;
+  gap:3em
+}
+
+.section2 {
+  display:flex;
+  flex-direction: column;
+  gap:3em;
+}
+
+.section3 {
+  display:flex;
+  flex-direction: column;
+  gap:3em;
+  
+}
+
+.section3 ul {
+  gap:3em;
+  display:flex;
+  flex-direction: column;
+ 
+}
+
+.section3 ul li {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:2em;
+}
+
+.section4 {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section4 ul {
+  display:flex;
+  flex-direction: column;
+  gap:3em
+}
+
+.section5 {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section5 .text {
+  margin-bottom:2.5em
+}
+
+footer {
+  background-color: var(--neutralfooter);
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  align-items: center;
+  text-align: center;
+  gap:2em;
+  margin-top:5em;
+  padding-block:3em
+}
+
+footer img {
+  width:15%;
+}
+
+footer ul {
+  display:flex;
+  flex-direction: column;
+  gap:1em
+}
+
+footer a {
+  color:var(--neutral1);
+}
+
+footer a:hover {
+  color:var(--primary1)
+}
+
+.social-icons {
+  display:flex;
+  width:100%;
+  gap:2em;
+  justify-content: center;
+}
+
+.social-icons i {
+  font-size:1.2rem
+
+}
+
+.social-icons i:hover {
+  color:var(--primary1);
+  cursor: pointer;
+}
+
+@media (min-width:60em) {
+
+  .container {
+    width:100vw
+  }
+
+  h2 {
+    font-size:1.6rem
+  }
+
+  header {
+    width:100%
+  }
+
+  header .text {
+    width:50%
+  }
+  
+  .section1 .text {
+    width:50%;
+  }
+
+  .download-buttons {
+   flex-direction: row;
+  }
+
+  .btn1, .btn2 {
+    width:15%
+  }
+
+  .section1 ul {
+    text-align: start;
+    align-items: flex-start;
+    margin-top:2em
+  }
+
+  .computer-flex {
+    flex-direction: row;
+  }
+
+  .computer-flex img {
+    width:50%;
+    transform: translateX(-4%);
+  }
+
+  .section2 {
+    width:50%;
+    align-self:center
+}
+
+  .section3 ul {
+    flex-direction: row;
+    width:70%;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .section3 ul li {
+    align-items: center;
+    width:30%;
+    justify-content: center;
+  }
+
+  .section4 ul{
+    flex-direction: row;
+    width:80%;
+    justify-content: space-between;
+    gap:0
+  }
+
+  .section4 img {
+    object-fit: contain;
+  }
+
+  .section5 .text {
+    width:50%
+  }
+
+  footer {
+    display:grid;
+    grid-template-columns: 3fr 7fr 3fr;
+    place-items: center;
+    padding:1.5em;
+}
+
+  footer ul {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1em;
+    column-gap: 2em;
+    place-items: center; 
+  }
+
+  footer img {
+    width:20%
+  }
+
+}
